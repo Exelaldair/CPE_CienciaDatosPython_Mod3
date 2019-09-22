@@ -18,3 +18,10 @@ print("headers\n", headers)
 
 df.columns = headers
 print(df.head(10))
+
+print(df.tail(10))
+
+df.dropna(subset=["price"], axis=0)
+
+print(df.columns)
+df.to_csv("automobile.csv", index=False)
