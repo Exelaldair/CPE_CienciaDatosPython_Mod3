@@ -21,6 +21,11 @@ print(df.head(10))
 
 print(df.tail(10))
 
+import numpy as np
+
+# replace "?" to NaN
+df.replace("?", np.nan, inplace = True)
+
 df.dropna(subset=["price"], axis=0)
 
 print(df.columns)
