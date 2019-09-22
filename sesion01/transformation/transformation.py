@@ -30,3 +30,9 @@ for column in missing_data.columns.values.tolist():
     print(column)
     print (missing_data[column].value_counts())
     print("")
+
+∫
+# bore
+avg_bore=df['bore'].astype('float').mean(axis=0)
+print("Average of bore:", avg_bore)
+df["bore"].replace(np.nan, avg_bore, inplace=True)
