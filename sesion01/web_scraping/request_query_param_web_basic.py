@@ -5,13 +5,13 @@
 
 import requests
 
-def search(keyword):
- url = 'https://www.google.com/search'
- params = {'q': keyword }
- r = requests.get(url, params=params)
- return r.text
+URL = "https://www.google.com/search"
 
-print(search('TECSUP'))
+params = {"q": "TECSUP" }
+
+r = requests.get(URL, params=params)
+
+print(r.text)
 
 
 
